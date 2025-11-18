@@ -1,0 +1,21 @@
+---
+import Tags from "./Tags.astro"
+
+const post = Astro.props
+const {url, frontmatter} = post.post;
+
+const {title, tags} = frontmatter
+const date = new Date(frontmatter.date).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+})
+---
+
+<a href={url} >
+  <div class="rounded-md bg-primary-300 p-4 border-2 border-primary-500 flex flex-col gap-2">
+    <p>{date}</p>
+  <h2 class="text-2xl font-bold">{title}</h2>
+    <Tags tags={tags}/>
+  </div>
+</a>

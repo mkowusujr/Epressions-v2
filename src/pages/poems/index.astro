@@ -1,0 +1,15 @@
+---
+import PostPreview from "../../components/PostPreview.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+const posts = Object.values (import.meta.glob<{tags:string[]}>("./**/*.md", {eager:true}));
+const title = "Poems"
+---
+<SiteLayout title={title}>
+	<h1 class="text-7xl font-bold">{title} </h1>
+	<ul class="flex flex-col gap-4">
+		{posts.map((post:any) => <li>
+			<PostPreview post={post} />
+		</li>)}
+	</ul>
+</SiteLayout>

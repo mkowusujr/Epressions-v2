@@ -1,0 +1,21 @@
+---
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+
+<html lang="en" class="h-screen">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title >{title}</title>
+	</head>
+	<body class="bg-primary-200 text-primary-900 flex h-screen">
+		<Nav/>
+		<main class="my-8 px-16 flex-1 overflow-y-auto">
+			<slot />
+		</main>
+	</body>
+</html>
