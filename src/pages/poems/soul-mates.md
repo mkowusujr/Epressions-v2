@@ -21,17 +21,17 @@ I'm not goldilocks, why is the search dragging on
 
 There doesn't seem to be a common census here.  
 
-I've had blindfolds over my eyes this entire time.
+I've had blindfolds over my eyes this entire time.  
 
-My soul mate isn't some manufactured person waiting for me at the end of my search,
-They are my partner in life, they weren't created to meet my needs,
-But through their love, they have come to want to help me.
+My soul mate isn't some manufactured person waiting for me at the end of my search,  
+They are my partner in life, they weren't created to meet my needs,  
+But through their love, they have come to want to help me.  
 
-To help me see things in my blind spots,
-They are the person who I am willing to fight for,
-The one I'm willing to work things out with,
-The one I'm willing to lay down my life for.
+To help me see things in my blind spots,  
+They are the person who I am willing to fight for,  
+The one I'm willing to work things out with,  
+The one I'm willing to lay down my life for.  
 
-My heart alone didn't teach me that or show me this,
-It was only when I mean you that I realize I want to make this work,
+My heart alone didn't teach me that or show me this,  
+It was only when I mean you that I realize I want to make this work,  
 I will fight against my selfishness because I love you and want to keep loving you. 
