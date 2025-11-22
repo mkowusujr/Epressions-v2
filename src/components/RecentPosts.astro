@@ -1,0 +1,9 @@
+---
+import PostLists from "./PostLists.astro";
+---
+<div>
+	<h1 class="text-7xl font-bold capitalize">Recent Posts</h1>
+  <div class="mt-16">
+    <PostLists limit={10} filter={() => true} />
+  </div>
+</div>

@@ -9,9 +9,7 @@ const posts = Object.values(
   .toSorted(
     (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date),
   )
-  .filter((post) =>
-    post.frontmatter.medium.includes(filter),
-  )
+  .filter(filter)
   .slice(0, limit);
 ---
 

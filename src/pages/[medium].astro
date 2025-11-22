@@ -1,0 +1,14 @@
+---
+import MediumLayout from "../layouts/MediumLayout.astro";
+
+export function getStaticPaths() {
+  return ["poems", "prose", "plays", "essays"].map((medium) => ({
+    params: {
+      medium: medium,
+    },
+  }));
+}
+const { medium } = Astro.params;
+---
+
+<MediumLayout title={medium} medium={medium} />

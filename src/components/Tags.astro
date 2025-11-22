@@ -1,10 +1,10 @@
 ---
 import TagBadge from "./TagBadge.astro";
 
-const { tags } = Astro.props;
+const { tags, className } = Astro.props;
 ---
 
-<ul>
+<ul class={className ?? ""}>
   {
     tags.map((tag: string) => (
       <li>

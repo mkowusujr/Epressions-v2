@@ -1,9 +1,24 @@
 ---
+import PostLists from "../../components/PostLists.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
-
+import type { Post } from "../../lib/types";
+export function getStaticPaths() {
+  return Object.values(import.meta.glob<Post>("../**/*.md", { eager: true }))
+    .filter((p) => !!p.frontmatter.tags)
+    .filter((v,i,arr) => arr.indexOf(v)===i)
+    .flatMap((p) => p.frontmatter.tags)
+    .map((tag) => ({
+      params: {
+        tag: tag,
+      },
+    }));
+}
 const { tag } = Astro.params;
 ---
 
 <SiteLayout>
-  <p>Posts tagged with {tag}</p>
+  <h1 class="text-7xl font-bold">Posts tagged with {tag}</h1>
+  <div class="mt-16">
+      <PostLists filter={(post: Post) => post.frontmatter.tags.includes(tag)} />
+  </div>
 </SiteLayout>

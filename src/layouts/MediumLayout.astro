@@ -1,12 +1,15 @@
 ---
 import PostLists from "../components/PostLists.astro";
+import type { Post } from "../lib/types";
 import SiteLayout from "./SiteLayout.astro";
-const { title, filter } = Astro.props;
+const { title, medium } = Astro.props;
 ---
 
 <SiteLayout title={title}>
   <h1 class="text-7xl font-bold capitalize">{title}</h1>
   <div class="mt-16">
-    <PostLists filter={filter} />
+    <PostLists
+      filter={(post: Post) => post.frontmatter.medium.includes(medium)}
+    />
   </div>
 </SiteLayout>
