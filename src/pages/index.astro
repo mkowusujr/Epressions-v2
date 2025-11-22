@@ -1,16 +1,22 @@
 ---
-import SiteLayout from "../layouts/SiteLayout.astro"
+import SiteLayout from "../layouts/SiteLayout.astro";
 import "../styles/global.css";
-const posts = Object.values (import.meta.glob<{tags:string[]}>("./**/*.md", {eager:true}));
+const posts = Object.values(
+  import.meta.glob<{ tags: string[] }>("./**/*.md", { eager: true }),
+);
 ---
 
 <SiteLayout title="Home">
-<div class="flex flex-col items-center">
-	<h1>Recent Posts</h1>
-	<ul>
-		{posts.map((p:any) => (<li>
-			<a href={p.url}>{p.frontmatter.title}</a>
-		</li>))}
-	</ul>
-</div>
+  <div class="flex flex-col items-center">
+    <h1>Recent Posts</h1>
+    <ul>
+      {
+        posts.map((p: any) => (
+          <li>
+            <a href={p.url}>{p.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </SiteLayout>

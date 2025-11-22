@@ -2,41 +2,40 @@
 
 @theme {
   /** Backgrounds */
-  --color-primary-100: #F2F0F0; 
-  --color-primary-200: #EFEAEC; 
-   /** Interactive components */ 
-  --color-primary-300: #EADDE3;
-  --color-primary-400: #E5D0D9;
-  --color-primary-500: #DDC3CF; 
-   /** Borders and Separators */ 
-  --color-primary-600: #D4B5C3; 
-  --color-primary-700: #C9A3B4; 
-  --color-primary-800: #BC8DA3; 
-   /** Solid Colors */ 
-  --color-primary-900: #B45C8A; 
-  --color-primary-1000: #A64F7D;
-   /** Accessible text */ 
-  --color-primary-1100: #96416F;
-  --color-primary-1200: #572841; 
+  --color-primary-100: #f2f0f0;
+  --color-primary-200: #efeaec;
+  /** Interactive components */
+  --color-primary-300: #eadde3;
+  --color-primary-400: #e5d0d9;
+  --color-primary-500: #ddc3cf;
+  /** Borders and Separators */
+  --color-primary-600: #d4b5c3;
+  --color-primary-700: #c9a3b4;
+  --color-primary-800: #bc8da3;
+  /** Solid Colors */
+  --color-primary-900: #b45c8a;
+  --color-primary-1000: #a64f7d;
+  /** Accessible text */
+  --color-primary-1100: #96416f;
+  --color-primary-1200: #572841;
 }
-
 
 [data-theme="dark"] {
   /** Backgrounds */
-  --color-primary-100: #120B0E; 
-  --color-primary-200: #201218; 
-   /** Interactive components */ 
+  --color-primary-100: #120b0e;
+  --color-primary-200: #201218;
+  /** Interactive components */
   --color-primary-300: #361828;
-  --color-primary-400: #4A1834;
-  --color-primary-500: #57203E; 
-   /** Borders and Separators */ 
-  --color-primary-600: #682D4C; 
-  --color-primary-700: #803C60; 
-  --color-primary-800: #A44E7C; 
-   /** Solid Colors */ 
-  --color-primary-900: #B45C8A; 
-  --color-primary-1000: #A64F7D;
-   /** Accessible text */ 
-  --color-primary-1100: #F698C7;
-  --color-primary-1200: #FBD3E5; 
+  --color-primary-400: #4a1834;
+  --color-primary-500: #57203e;
+  /** Borders and Separators */
+  --color-primary-600: #682d4c;
+  --color-primary-700: #803c60;
+  --color-primary-800: #a44e7c;
+  /** Solid Colors */
+  --color-primary-900: #b45c8a;
+  --color-primary-1000: #a64f7d;
+  /** Accessible text */
+  --color-primary-1100: #f698c7;
+  --color-primary-1200: #fbd3e5;
 }

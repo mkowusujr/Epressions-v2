@@ -1,0 +1,23 @@
+---
+import PostPreview from "../components/PostPreview.astro";
+import type { Post } from "../lib/types";
+import SiteLayout from "./SiteLayout.astro";
+
+const { title } = Astro.props;
+const posts = Object.values(
+  import.meta.glob<{ tags: string[] }>("../pages/**/*.md", { eager: true }),
+).filter((post) => (post as unknown as Post).frontmatter.medium === title);
+---
+
+<SiteLayout title={title}>
+  <h1 class="text-7xl font-bold capitalize">{title}</h1>
+  <ul class="mt-16 flex flex-col gap-4">
+    {
+      posts.map((post: any) => (
+        <li>
+          <PostPreview post={post} />
+        </li>
+      ))
+    }
+  </ul>
+</SiteLayout>

@@ -1,10 +1,11 @@
 ---
-import ButtonLayout from "../layouts/ButtonLayout.astro"
+import ButtonLayout from "../layouts/ButtonLayout.astro";
 
-const {text, href} = Astro.props
+const { text, href } = Astro.props;
 ---
-<a  href={href} >
-	<ButtonLayout>
-			{text}
-	</ButtonLayout>
+
+<a href={href}>
+  <ButtonLayout>
+    {text}
+  </ButtonLayout>
 </a>

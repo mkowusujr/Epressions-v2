@@ -1,12 +1,15 @@
 ---
-import TagBadge from "./TagBadge.astro"
+import TagBadge from "./TagBadge.astro";
 
-
-const {tags} = Astro.props
+const { tags } = Astro.props;
 ---
 
 <ul>
-	{tags.map((tag:string) => (<li>
-		<TagBadge tag={tag} />
-	</li>))}
+  {
+    tags.map((tag: string) => (
+      <li>
+        <TagBadge tag={tag} />
+      </li>
+    ))
+  }
 </ul>
