@@ -1,0 +1,26 @@
+---
+import PostPreview from "../components/PostPreview.astro";
+import type { Post } from "../lib/types";
+
+const { filter, limit } = Astro.props;
+const posts = Object.values(
+  import.meta.glob<Post>("../pages/**/*.md", { eager: true }),
+)
+  .toSorted(
+    (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date),
+  )
+  .filter((post) =>
+    post.frontmatter.medium.includes(filter),
+  )
+  .slice(0, limit);
+---
+
+<ul class="flex flex-col gap-4">
+  {
+    posts.map((post: any) => (
+      <li>
+        <PostPreview post={post} />
+      </li>
+    ))
+  }
+</ul>

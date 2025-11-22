@@ -1,22 +1,12 @@
 ---
+import PostLists from "../components/PostLists.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import "../styles/global.css";
-const posts = Object.values(
-  import.meta.glob<{ tags: string[] }>("./**/*.md", { eager: true }),
-);
 ---
 
 <SiteLayout title="Home">
-  <div class="flex flex-col items-center">
-    <h1>Recent Posts</h1>
-    <ul>
-      {
-        posts.map((p: any) => (
-          <li>
-            <a href={p.url}>{p.frontmatter.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+  <h1 class="text-7xl font-bold capitalize">Recent Posts</h1>
+  <div class="mt-16">
+    <PostLists limit={10} filter="" />
   </div>
 </SiteLayout>
