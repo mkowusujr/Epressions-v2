@@ -1,13 +1,15 @@
 ---
-import type { Post } from "../lib/types"
-import Tags from "./Tags.astro"
-const tags = Object.values(import.meta.glob<Post>("../**/*.md", { eager: true }))
-    .filter((p) => !!p.frontmatter.tags)
-		.filter((v,i,arr) => arr.indexOf(v)===i)
-    .flatMap((p) => p.frontmatter.tags)
+import type { Post } from "../lib/types";
+import Tags from "./Tags.astro";
+const tags = Object.values(
+  import.meta.glob<Post>("../**/*.md", { eager: true }),
+)
+  .filter((p) => !!p.frontmatter.tags)
+  .filter((v, i, arr) => arr.indexOf(v) === i)
+  .flatMap((p) => p.frontmatter.tags);
 ---
-<div>
-	<h1 class="font-bold text-7xl mb-16">Site Tags</h1>
-		<Tags tags={tags} className="flex gap-4"/>
-</div>
 
+<div>
+  <h1 class="mb-16 text-7xl font-bold">Site Tags</h1>
+  <Tags tags={tags} className="flex gap-4" />
+</div>

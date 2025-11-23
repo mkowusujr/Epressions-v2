@@ -5,7 +5,7 @@ import type { Post } from "../../lib/types";
 export function getStaticPaths() {
   return Object.values(import.meta.glob<Post>("../**/*.md", { eager: true }))
     .filter((p) => !!p.frontmatter.tags)
-    .filter((v,i,arr) => arr.indexOf(v)===i)
+    .filter((v, i, arr) => arr.indexOf(v) === i)
     .flatMap((p) => p.frontmatter.tags)
     .map((tag) => ({
       params: {
@@ -19,6 +19,6 @@ const { tag } = Astro.params;
 <SiteLayout>
   <h1 class="text-7xl font-bold">Posts tagged with {tag}</h1>
   <div class="mt-16">
-      <PostLists filter={(post: Post) => post.frontmatter.tags.includes(tag)} />
+    <PostLists filter={(post: Post) => post.frontmatter.tags.includes(tag)} />
   </div>
 </SiteLayout>

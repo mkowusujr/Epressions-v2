@@ -20,6 +20,15 @@
   --color-primary-1200: #572841;
 }
 
+p,
+h1 {
+  color: var(---color-primary-1200) !;
+}
+
+.c0 {
+  text-indent: 36px;
+}
+
 [data-theme="dark"] {
   /** Backgrounds */
   --color-primary-100: #120b0e;
