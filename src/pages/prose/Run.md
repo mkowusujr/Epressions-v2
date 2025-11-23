@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/ProseLayout.astro
-tags: sci-fi
+tags: ["sci-fi"]
 date: 11/14/2023
 title: Run
 medium: prose
